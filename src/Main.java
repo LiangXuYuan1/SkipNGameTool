@@ -9,6 +9,9 @@ public class Main {
         System.out.println("请问n是多少？请输入一个整数");
         int n = scanner.nextInt();
 
+        if (n <= 0)
+            return;
+
         System.out.println("请问打算从1报数到几？请输入一个整数");
         int limit = scanner.nextInt();
 
@@ -20,7 +23,7 @@ public class Main {
     private static boolean hasN(int number, int n) {
         int temp = number;
         while (temp > 0) {
-            if (temp % 10 == 7) {
+            if (temp % 10 == n) {
                 return true;
             }
             temp /= 10;
